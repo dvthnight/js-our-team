@@ -68,3 +68,22 @@ const team = [
 
       teamContainer.innerHTML += cardMember;
   }
+
+
+//   al click del pulsante pprendo i dati inseriti, li passo alla funzione
+//   che genera il codice HTML e lo appendo
+
+
+const butttonAddMember = document.getElementById("addMemberButton");
+const immagineInserita = document.getElementById("image");
+const ruoloInserito = document.getElementById("role");
+const nomeInserito = document.getElementById("name");
+
+butttonAddMember.addEventListener("click", function(){
+    console.log(immagineInserita.value,ruoloInserito.value,nomeInserito.value);
+    const valImmagineInserita = immagineInserita.value;
+    const valRuoloInserito = ruoloInserito.value;
+    const valNomeInserito = nomeInserito.value;
+    const newMember = generatoreCard(valNomeInserito,valRuoloInserito,valImmagineInserita);
+    teamContainer.innerHTML+=newMember;
+})
