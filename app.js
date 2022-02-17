@@ -50,3 +50,15 @@ const team = [
                             </div>`
     return cardTeamMember;
   }
+
+  const teamContainer  = document.querySelector(".team-container");
+
+  for(let i=0; i< team.length; i++){
+      const nomeMembro = team[i].name;
+      const imggMembro = team[i].image;
+      const ruoloMembro = team[i].role;
+      console.log(nomeMembro,imggMembro,ruoloMembro);
+
+      const cardMember = generatoreCard(nomeMembro,ruoloMembro,imggMembro);
+      console.log(cardMember);
+  }
